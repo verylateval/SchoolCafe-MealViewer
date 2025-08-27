@@ -1,4 +1,4 @@
-Module.register("MMM-MealViewer", {
+Module.register("MMM-SchoolCafe", {
     defaults: {
         schoolId: "",
         updateInterval: 14400000,
@@ -42,6 +42,8 @@ Module.register("MMM-MealViewer", {
         this.sendSocketNotification("GET_MEAL_DATA", {
             identifier: this.identifier,
             schoolId: this.config.schoolId,
+            personId: this.config.personId,
+            grade: this.config.grade,
             filters: this.config.filters,
             itemTypeFilters: this.config.itemTypeFilters,
             exactNameFilters: this.config.exactNameFilters,
@@ -147,6 +149,6 @@ Module.register("MMM-MealViewer", {
     },
 
     getStyles: function () {
-        return ["MMM-MealViewer.css"];
+        return ["MMM-SchoolCafe.css"];
     }
 });

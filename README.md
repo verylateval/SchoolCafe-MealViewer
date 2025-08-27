@@ -1,6 +1,6 @@
-# MMM-MealViewer
+# MMM-SchoolCafe
 
-A MagicMirror module for displaying school breakfast and lunch menus from MealViewer. You can check to see if your school uses MealViewer [here](https://schools.mealviewer.com/). **Note - if there are no valid menus for the current week (ie- school is out) the module will not display.*
+A MagicMirror module for displaying school breakfast and lunch menus from SchoolCafe. You can check to see if your school uses SchoolCafe [here](https://schools.SchoolCafe.com/). **Note - if there are no valid menus for the current week (ie- school is out) the module will not display.*
 
 - [Screenshots](#screenshots)
 - [Installation](#installation)
@@ -29,11 +29,11 @@ Multiple instances:
 
 2\. Clone this repository:
 
-`git clone https://github.com/ElliAndDad/MMM-MealViewer.git`
+`git clone https://github.com/VeryLateVal/MMM-SchoolCafe.git`
 
 3\. Install dependencies:
 
-`cd MMM-MealViewer`
+`cd MMM-SchoolCafe`
 
 `npm install`
 
@@ -43,7 +43,7 @@ Add the following to your `config.js` file:
 
 ```javascript
 {
-    module: "MMM-MealViewer",
+    module: "MMM-SchoolCafe",
     position: "top_left",
     config: {
         schoolId: "YourSchoolId",
@@ -78,18 +78,21 @@ Add the following to your `config.js` file:
 
 `schoolId`
 
-- To find your school ID go to <a href="https://schools.mealviewer.com/" target="_blank">MealViewer</a>, search for your school and click on it.
+- To find your school ID go to <a href="https://www.schoolcafe.com/" target="_blank">SchoolsCafe</a>, search for your school and click on it.
 
-- The url will look like `https://schools.mealviewer.com/school/YourSchoolID`
+- The url will look like `https://webapis.schoolcafe.com/api/CalendarView/GetDailyMenuitemsByGrade?SchoolId=22b5b11-8093-42fd-9d64-0cb0ef3cb2f2&ServingDate=08%2F24%2F2025&MealType=Lunch&Grade=01&PersonId=f6a3b141-127d-2ab3-be6c-47ff7ddd0d60`
+  
 
-- Copy `YourSchoolID` and paste it into the config.js
+- Copy `SchoolId,PersonId,Grade` and paste it into the config.js
 
 *Example*
 ```javascript
- module: "MMM-MealViewer",
+ module: "MMM-SchoolCafe",
  position: "top_right",
  config: {
-     schoolId: "MLKElementary",
+     schoolId: "14b4cb11-8096-44fe-9c64-0eb0e81cb1f2",
+     personid:"",
+     grade:""
 ```
 
 ## Optional Configuration
@@ -149,7 +152,7 @@ showLunch: true,      // Show lunch menu
 
 ## Filters
 
-This module offers four types of filters to remove menu items you don't want to display. Each filter type can be applied separately to breakfast and/or lunch menus. For help with filtering items or categories, uncomment lines 51 and 66 in `node_helper.js`, this will write `parsedMealData.json` and `rawMealData.json` files to your `MMM-MealViewer` folder when you run the module. You can then search the data in these files to find `item_Type`, `item_name`, etc that you want to remove.
+This module offers four types of filters to remove menu items you don't want to display. Each filter type can be applied separately to breakfast and/or lunch menus. For help with filtering items or categories, uncomment lines 51 and 66 in `node_helper.js`, this will write `parsedMealData.json` and `rawMealData.json` files to your `MMM-SchoolCafe` folder when you run the module. You can then search the data in these files to find `item_Type`, `item_name`, etc that you want to remove.
 
 1\. `filters`
 
@@ -213,13 +216,13 @@ Would exclude "Garden Bar Tomatoes", "Garden Bar Lettuce", etc.
 
 ## Configuration for Multiple School Menus
 
-To display menus for multiple schools on your MagicMirror, you can add multiple instances of the MMM-MealViewer module to your config file.
+To display menus for multiple schools on your MagicMirror, you can add multiple instances of the MMM-SchoolCafe module to your config file.
 
 Here's an example configuration for displaying menus from two different schools:
 
 ```javascript
 {
-    module: "MMM-MealViewer",
+    module: "MMM-SchoolCafe",
     position: "top_left",
     config: {
         schoolId: "YourSchoolId1",
@@ -249,7 +252,7 @@ Here's an example configuration for displaying menus from two different schools:
     }
 },
 {
-    module: "MMM-MealViewer",
+    module: "MMM-SchoolCafe",
     position: "top_left",
     config: {
         schoolId: "YourSchoolId2",

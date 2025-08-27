@@ -1,25 +1,25 @@
 {
-    "name": "mmm-mealviewer",
+    "name": "mmm-SchoolCafe",
     "version": "1.0.0",
-    "description": "MagicMirror module to display school meal menus using MealViewer API",
-    "main": "MMM-MealViewer.js",
+    "description": "MagicMirror module to display school meal menus using SchoolCafe API",
+    "main": "MMM-SchoolCafe.js",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/dadAndEl/MMM-MealViewer.git"
+        "url": "git+https://github.com/verylateval/MMM-SchoolCafe.git"
     },
     "keywords": [
         "magicmirror",
         "module",
-        "mealviewer",
+        "SchoolCafe",
         "school",
         "menu"
     ],
-    "author": "Ben Miller dadandel@pm.me",
+    "author": "Valerie Anderson",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/dadAndEl/MMM-MealViewer/issues"
+        "url": "https://github.com/verylateval/MMM-SchoolCafe/issues"
     },
-    "homepage": "https://github.com/dadAndEl/MMM-MealViewer/#readme",
+    "homepage": "https://github.com/verylateval/MMM-SchoolCafe/#readme",
     "dependencies": {
         "axios": "^1.7.7"
     },
